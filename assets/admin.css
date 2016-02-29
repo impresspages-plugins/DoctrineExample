@@ -1,0 +1,9 @@
+.productTable td, .productTable th {
+    border: 1px solid #222;
+    border-collapse: collapse;
+    padding: 3px 5px;
+}
+
+.productTable th {
+    background-color: #ccc;
+}

@@ -1,0 +1,7 @@
+{
+    "title": "Doctrine usage example",
+    "version": "1.00",
+    "name": "DoctrineExample",
+    "description": "Example how to use Doctrine with Doctrine plugin",
+    "author": "ImpressPages"
+}
