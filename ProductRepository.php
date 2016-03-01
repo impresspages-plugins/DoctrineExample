@@ -25,7 +25,7 @@ class ProductRepository extends EntityRepository
     {
         $em = \Plugin\Doctrine\Service::getEntityManager();
         $this->em = $em;
-        parent::__construct($em, $em->getClassMetadata(Product::class));
+        parent::__construct($em, $em->getClassMetadata('Plugin\DoctrineExample\Entity\Product'));
     }
 
     public function addProduct($title)
@@ -56,7 +56,7 @@ class ProductRepository extends EntityRepository
     {
         $qb = $this->em->createQueryBuilder();
         $results = $qb->select('p')
-            ->from(Product::class, 'p')
+            ->from('Plugin\DoctrineExample\Entity\Product', 'p')
             ->orderBy('p.title', 'ASC')->getQuery()->execute();
         return $results;
     }

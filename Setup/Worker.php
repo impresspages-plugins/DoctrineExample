@@ -11,7 +11,7 @@ class Worker extends \Ip\SetupWorker
     {
         $em = \Plugin\Doctrine\Service::getEntityManager();
         $classes = array(
-            $em->getClassMetadata(Product::class)
+            $em->getClassMetadata('Plugin\DoctrineExample\Entity\Product')
         );
         $tool = new \Doctrine\ORM\Tools\SchemaTool($em);
         $tool->createSchema($classes);
@@ -21,7 +21,7 @@ class Worker extends \Ip\SetupWorker
     {
         $em = \Plugin\Doctrine\Service::getEntityManager();
         $classes = [
-            $em->getClassMetadata(Product::class)
+            $em->getClassMetadata('Plugin\DoctrineExample\Entity\Product')
         ];
         $tool = new \Doctrine\ORM\Tools\SchemaTool($em);
         $tool->dropSchema($classes);
